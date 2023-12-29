@@ -54,19 +54,24 @@ def Easy_game():
             time.sleep(0.5)
             for i in range(0, len(Easy_shuffle)):
                 if picked[i] == Easy_shuffle[i]:
-                    print(f'{TextStyle.BOLD}Congratulations , you have guessed it right! and you have won the game in easy mode {TextStyle.END}. \nNow i think you should try the Medium level.. ')
+                    print(
+                        f'{TextStyle.BOLD}Congratulations , you have guessed it right! and you have won the game in easy mode {TextStyle.END}. \nNow i think you should try the Medium level.. '
+                    )
                     won = True
                     break
                 elif picked[i] != Easy_shuffle[i]:
                     print(
-                        'You didnt guessed it right , you can still try by dropping the items and re-arranging it all.. \n ')
+                        'You didnt guessed it right , you can still try by dropping the items and re-arranging it all.. \n '
+                    )
                     print(f'This is the list of the items you picked {picked}')
                     break
         if not won:
             print(
-                f'This is the list of the items you have to pick and drop {Easy} \n ')
+                f'This is the list of the items you have to pick and drop {Easy} \n '
+            )
             item = str(input(
-                'Pick an item by entering "pick (item name) or drop it by entering "drop (item name) : \n'))
+                'Pick an item by entering "pick (item name) or drop it by entering "drop (item name) : \n'
+            ))
             item_value = item[5:]
             item_value.strip().lower()
             command = item[:4]
@@ -80,17 +85,20 @@ def Easy_game():
                     else:
                         picked.append(item_value)
                         print(
-                            f"{TextStyle.ITALIC}These are the items that you have picked {TextStyle.END} \n{picked}\n ")
+                            f"{TextStyle.ITALIC}These are the items that you have picked {TextStyle.END} \n{picked}\n "
+                        )
 
                 elif command.strip().lower() == 'drop':
                     if item_value not in picked:
                         print(
-                            'you cannot drop an item that has not been picked yet.\n ')
+                            'you cannot drop an item that has not been picked yet.\n '
+                        )
 
                     else:
                         picked.remove(item_value)
                     print(
-                        f"These are the items that you have picked \n{picked}\n ")
+                        f"These are the items that you have picked \n{picked}\n "
+                    )
 
             elif item_value not in Easy or command != 'pick' or 'drop':
                 print('invalid item name try again')
@@ -102,25 +110,33 @@ def Mid_game():
 
     while won == False:
         if len(picked) == len(Mid):
-            print('you have picked all the items available for you to pick but lets check if its the right order.... \n ')
+            print(
+                'you have picked all the items available for you to pick but lets check if its the right order.... \n '
+            )
             time.sleep(1)
             print('Working on it.... \n \n')
             time.sleep(0.5)
             for i in range(0, len(Mid_shuffle)):
                 if picked[i] == Mid_shuffle[i]:
-                    print(f'{TextStyle.BOLD}Congratulations , you have guessed it right! and you have won the game in medium diffculty {TextStyle.END}. \nNow i think you should try the Hardest level...')
+                    print(
+                        f'{TextStyle.BOLD}Congratulations , you have guessed it right! and you have won the game in medium diffculty {TextStyle.END}. \nNow i think you should try the Hardest level...'
+                    )
                     won = True
                     break
+
                 elif picked[i] != Mid_shuffle[i]:
                     print(
-                        'You didnt guessed it right , you can still try by dropping the items and re-arranging it all.. \n ')
+                        'You didnt guessed it right , you can still try by dropping the items and re-arranging it all.. \n '
+                    )
                     print(f'This is the list of the items you picked {picked}')
                     break
         if not won:
             print(
-                f'This is the list of the items you have to pick and drop {Mid} \n ')
+                f'This is the list of the items you have to pick and drop {Mid} \n '
+            )
             item = str(input(
-                'Pick an item by entering "pick (item name) or drop it by entering "drop (item name) : \n'))
+                'Pick an item by entering "pick (item name) or drop it by entering "drop (item name) : \n'
+            ))
             item_value = item[5:]
             item_value.strip().lower()
             command = item[:4]
@@ -134,17 +150,20 @@ def Mid_game():
                     else:
                         picked.append(item_value)
                         print(
-                            f"{TextStyle.ITALIC}These are the items that you have picked {TextStyle.END} \n{picked}\n ")
+                            f"{TextStyle.ITALIC}These are the items that you have picked {TextStyle.END} \n{picked}\n "
+                        )
 
                 elif command == 'drop':
                     if item_value not in picked:
                         print(
-                            'you cannot drop an item that has not been picked yet.\n ')
+                            'you cannot drop an item that has not been picked yet.\n '
+                        )
 
                     else:
                         picked.remove(item_value)
                     print(
-                        f"These are the items that you have picked \n{picked}\n ")
+                        f"These are the items that you have picked \n{picked}\n "
+                    )
 
             elif item_value not in Mid or command != 'pick' or 'drop':
                 print('invalid item name try again')
@@ -156,25 +175,42 @@ def Hard_game():
 
     while won == False:
         if len(picked) == len(Hard):
-            print('you have picked all the items available for you to pick but lets check if its the right order.... \n ')
+            print(
+                'you have picked all the items available for you to pick but lets check if its the right order.... \n '
+            )
+
             time.sleep(1)
             print('Working on it.... \n \n')
             time.sleep(0.5)
+
             for i in range(0, len(Hard_shuffle)):
                 if picked[i] == Hard_shuffle[i]:
-                    print(f'{TextStyle.BOLD}Congratulations , you have guessed it right! and you have won the game in Hardest  Diffuclty !! {TextStyle.END}.')
+                    print(
+                        f'{TextStyle.BOLD}Congratulations , you have guessed it right! and you have won the game in Hardest  Diffuclty !! {TextStyle.END}.'
+                    )
+
                     won = True
                     break
+
                 elif picked[i] != Hard_shuffle[i]:
                     print(
-                        'You didnt guessed it right , you can still try by dropping the items and re-arranging it all.. \n ')
-                    print(f'This is the list of the items you picked {picked}')
+                        'You didnt guessed it right , you can still try by dropping the items and re-arranging it all.. \n '
+                    )
+                    print(
+                        f'This is the list of the items you picked {picked}'
+                    )
+
                     break
         if not won:
+
             print(
-                f'This is the list of the items you have to pick and drop {Hard} \n ')
+                f'This is the list of the items you have to pick and drop {Hard} \n '
+            )
+
             item = str(input(
-                'Pick an item by entering "pick (item name) or drop it by entering "drop (item name) : \n'))
+                'Pick an item by entering "pick (item name) or drop it by entering "drop (item name) : \n'
+            ))
+
             item_value = item[5:]
             item_value.strip().lower()
             command = item[:4]
@@ -188,20 +224,24 @@ def Hard_game():
                     else:
                         picked.append(item_value)
                         print(
-                            f"{TextStyle.ITALIC}These are the items that you have picked {TextStyle.END} \n{picked}\n ")
+                            f"{TextStyle.ITALIC}These are the items that you have picked {TextStyle.END} \n{picked}\n "
+                        )
 
                 elif command == 'drop':
                     if item_value not in picked:
                         print(
-                            'you cannot drop an item that has not been picked yet.\n ')
+                            'you cannot drop an item that has not been picked yet.\n '
+                        )
 
                     else:
                         picked.remove(item_value)
                     print(
-                        f"These are the items that you have picked \n{picked}\n ")
+                        f"These are the items that you have picked \n{picked}\n "
+                    )
 
             elif item_value not in Hard or command != 'pick' or 'drop':
                 print('invalid item name try again')
+
 
 print(rules_str)
 
